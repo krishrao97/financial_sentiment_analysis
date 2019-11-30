@@ -1,0 +1,37 @@
+Things we should consider for the sentiment analysis project:
+
+* first and foremost, check if the sentiment classifier is working reasonably
+  (Ie checking it on a some samples sentences)
+  in the future, we can also consider improving the classifier by using
+  lexicon methods or more advanced published methods
+
+* for the monthly sentiment classifier, I first computed the daily sentiments
+   Then performed a moving average.  As a sanity check, we should instead 
+   directly conglomerate sentiments per month and make sure they are the same
+
+* we can apply smoothing techniques to the time series to more clearly
+  see trends.  Of course, perceived trends may not actually be significant
+     * to do this, we can use Rose (eg ask Feng) or other python packages
+
+* analyze the results.  This includes:
+    * are fluctuations/trends in predicted sentiment statistically significant?
+      Krishna -- perhaps you know which types of statistical tests to use for 
+      this, I don't
+    * do changes in sentiment follow/precede historical events?
+    * do changes in sentiment follow/precede stock price changes?
+
+* related to the last point, for the banks, we seem to have a lot of data around
+  2008 -- we should try to analyze that time period more closely
+
+* try to take different perspectives to make predicted sentiment less noisy
+  (This is intentionally vague, I'm not really sure what to do here)
+    * I think Alex said we should at least have weekly signals (not monthly).
+      So I guess the goal is weekly signals that are not too noisy
+
+* Get more data to evaluate the model on, i.e., extend Reuters
+    * perhaps we can do this by adding data sets into Reuters
+    * one purpose for this is to reduce noise in the signals
+    * another purpose for this is that right now Reuters only goes back
+      to 2007; Alex wants us to find data which ideally goes back to 1990
+
+* when everything is working well, Alex wants us to test our results against the data in this notebook (https://rose.ai/dashboard/usa.investment.banks.20191125)
