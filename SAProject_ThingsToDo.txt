@@ -35,3 +35,11 @@ Things we should consider for the sentiment analysis project:
       to 2007; Alex wants us to find data which ideally goes back to 1990
 
 * when everything is working well, Alex wants us to test our results against the data in this notebook (https://rose.ai/dashboard/usa.investment.banks.20191125)
+
+* make distribution of labels of training set match that of test set
+
+* think about doing: ngrams, tfidf, word-to-vec
+
+* just look at titles
+
+* from what Neville said: look at how sentiment relates to stock; can you trade stocks?
